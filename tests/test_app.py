@@ -1,6 +1,6 @@
 import unittest
 from flask import Flask
-from app import app.py  # Import your Flask app. Change 'app' to your file name if different.
+from app import app # Import your Flask app. Change 'app' to your file name if different.
 import json
 
 class FlaskWeatherAppTestCase(unittest.TestCase):
