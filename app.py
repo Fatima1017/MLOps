@@ -16,8 +16,8 @@ app = Flask(__name__)
 def get_live_data():
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "latitude": 52.52,       # Berlin's latitude
-    "longitude": 13.41,      # Berlin's longitude
+        "latitude": 74.35,       # Lahore's latitude
+    "longitude": 31.52,      # Lahore's longitude
     "hourly": ",".join([
         'temperature_2m' ,
     'relative_humidity_2m',
@@ -44,8 +44,9 @@ def get_live_data():
     	'longitude': weather_data['longitude'],
     	'latitude': weather_data['latitude'],
     	'timezone': weather_data['timezone'],
+        'apparent_temperature': weather_data['hourly']['apparent_temperature'][0],
         'temperature_2m': weather_data['hourly']['temperature_2m'][0],
-        'humidity': weather_data['hourly']['relative_humidity_2m'][0],  # Corrected key
+        'relative_humidity_2m': weather_data['hourly']['relative_humidity_2m'][0],  # Corrected key
         'wind_speed_10m': weather_data['hourly']['wind_speed_10m'][0],
         'precipitation_probability': weather_data['hourly']['precipitation_probability'][0],
         'rain': weather_data['hourly']['rain'][0],
