@@ -7,8 +7,10 @@
 </head>
 <body>
     <h1>Live Weather Data</h1>
-    <ul>
-        <li>Temperature (2m): {{ live_data.temperature_2m }} °C</li>
+    <ul> 
+
+        <li>timezone: {{live_data.timezone}}</li>
+        <li>apparent_temperature: {{ live_data.apparent_temperature }} °C</li>
         <li>Humidity: {{ live_data.relative_humidity_2m }} %</li>
         <li>Wind Speed: {{ live_data.wind_speed_10m }} m/s</li>
         <li>Precipitation Probability: {{ live_data.precipitation_probability }} %</li>
