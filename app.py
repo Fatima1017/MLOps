@@ -76,10 +76,29 @@ def live_dashboard():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    print(data)
-    input_features = np.array(data['features']).reshape(1, -1)
-    prediction = model.predict(input_features)
-    return jsonify({'prediction': prediction[0]})
+    print("Received data:", data)  # Debugging line to check incoming data
+
+    # Ensure 'features' key exists in the data
+    if 'features' not in data:
+        return jsonify({'error': 'No features provided'}), 400
+
+    # Convert input features to numpy array and reshape
+    try:
+        input_features = np.array(data['features']).reshape(1, -1)  # Reshape to 2D array
+        print("Input features shape:", input_features.shape)  # Debugging line to check the shape
+
+        # Check if the input features have the right number of columns
+        if input_features.shape[1] != 14:
+            return jsonify({'error': f'Expected 14 features, but got {input_features.shape[1]}'}), 400
+        
+        # Make the prediction
+        prediction = model.predict(input_features)
+
+        return jsonify({'prediction': prediction[0]})
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 # API endpoint for model accuracy
 @app.route('/accuracy', methods=['POST'])
