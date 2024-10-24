@@ -115,7 +115,7 @@ def accuracy():
     r2 = r2_score([actual_target], [y_pred])
 
     # Render the results in an HTML page
-    return render_template('accuracy_result.html', mse=mse, r2=r2)
+    return render_template('accuracy.html', mse=mse, r2=r2)
 
 @app.route('/get_accuracy')
 def get_accuracy_form():
