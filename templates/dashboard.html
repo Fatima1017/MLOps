@@ -8,12 +8,20 @@
 <body>
     <h1>Live Weather Data</h1>
     <ul>
-    	<li>Coordinates: {{live_data.latitude}}, {{live_data.longitude}}</li>
-    	<li>Timezone: {{live_data.timezone}}</li>
         <li>Temperature (2m): {{ live_data.temperature_2m }} °C</li>
-        <li>Humidity: {{ live_data.humidity }} %</li>
+        <li>Humidity: {{ live_data.relative_humidity_2m }} %</li>
         <li>Wind Speed: {{ live_data.wind_speed_10m }} m/s</li>
         <li>Precipitation Probability: {{ live_data.precipitation_probability }} %</li>
+        <li> rain: {{live_data.rain}}<li>
+        <li>pressure: {{live_data.pressure_msl}} msl</li>
+        <li>cloud_cover: {{live_data.cloud_cover}}</li>
+        <li>visbility: {{live_data.visibility}}</li>
+        <li>windspeed_80m: {{live_data.wind_speed_80m}}</li>
+        <li>windspeed_120m: {{live_data.wind_speed_120m}}</li>
+        <li>windspeed_180m: {{live_data.wind_speed_180m}}</li>
+        <li>temperature_80m: {{live_data.temperature_80m}}</li>
+        <li>temperature_120m: {{live_data.temperature_120m</li>
+        <li>temperature_180m: {{live_data.temperature_180m}}</li>
     </ul>
 </body>
 </html>

@@ -85,7 +85,7 @@ def predict():
 @app.route('/accuracy', methods=['POST'])
 def accuracy():
     # Extract the form data
-    form_data = request.form.get((f'feature{i+1}') for i in range(4) ) # Adjust for the number of features
+    form_data = request.form.get((f'feature{i+1}') for i in range(14) ) # Adjust for the number of features
     actual_target = request.form.get('target') # Get the actual target value
     
     input_features = np.array(form_data).reshape(1, -1)  # Reshape input features for the model
