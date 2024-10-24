@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+</head>
+<body>
+    <h1>Enter Weather Data</h1>
+    <form action="/predict" method="POST">
+        <label>Temperature (2m):</label>
+        <input type="number" step="0.01" name="temperature_2m"><br><br>
+        
+        <label>Humidity (2m):</label>
+        <input type="number" step="0.01" name="humidity"><br><br>
+        
+        <label>Wind Speed (10m):</label>
+        <input type="number" step="0.01" name="wind_speed"><br><br>
+        
+        <label>Precipitation Probability:</label>
+        <input type="number" step="0.01" name="precipitation_probability"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

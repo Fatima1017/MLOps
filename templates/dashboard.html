@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Weather Dashboard</title>
+</head>
+<body>
+    <h1>Live Weather Data</h1>
+    <ul>
+    	<li>Coordinates: {{live_data.latitude}}, {{live_data.longitude}}</li>
+    	<li>Timezone: {{live_data.timezone}}</li>
+        <li>Temperature (2m): {{ live_data.temperature_2m }} °C</li>
+        <li>Humidity: {{ live_data.humidity }} %</li>
+        <li>Wind Speed: {{ live_data.wind_speed_10m }} m/s</li>
+        <li>Precipitation Probability: {{ live_data.precipitation_probability }} %</li>
+    </ul>
+</body>
+</html>
+ 

@@ -1,0 +1,17 @@
+<form action="/accuracy" method="POST">
+    <label for="feature1">Feature 1:</label>
+    <input type="number" name="humidity" step="any" required><br><br>
+    
+    <label for="feature2">Feature 2:</label>
+    <input type="number" name="Wind Speed" step="any" required><br><br>
+    
+    <label for="feature3">Feature 3:</label>
+    <input type="number" name="Precipitation Probability" step="any" required><br><br>
+    
+    <!-- Add more input fields as necessary for other features -->
+    
+    <label for="target">Actual Target Value:</label>
+    <input type="number" name="Temperature (2m)" step="any" required><br><br>
+    
+    <button type="submit">Get Accuracy</button>
+</form>
