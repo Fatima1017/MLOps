@@ -1,6 +1,6 @@
 import unittest
 from flask import Flask
-from app import app  # Import your Flask app. Change 'app' to your file name if different.
+from app import app.py  # Import your Flask app. Change 'app' to your file name if different.
 import json
 
 class FlaskWeatherAppTestCase(unittest.TestCase):
@@ -14,7 +14,7 @@ class FlaskWeatherAppTestCase(unittest.TestCase):
         """Test the live dashboard route."""
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Temperature', response.data)  # Update this based on your dashboard template content
+        self.assertIn(b'temperature_2m', response.data)  # Update this based on your dashboard template content
 
     def test_predict(self):
         """Test the prediction API endpoint."""
